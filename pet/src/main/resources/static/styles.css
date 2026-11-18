@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f3f6fb;
+    color: #263238;
+}
+
+header {
+    background: #0d5c50;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+.form-container, .products-container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000010;
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #218878;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+    background: white;
+    color: #263238;
+}
+
+input:focus, select:focus {
+    border-color: #218878;
+}
+
+select {
+    cursor: pointer;
+}
+
+button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-save {
+    background: #00473c;
+    color: white;
+    margin-top: 18px;
+}
+
+.btn-save:hover {
+    background: #206e63;
+}
+
+.btn-edit {
+    background: #f0ad4e;
+    color: white;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-cancel {
+    background: #777;
+    color: white;
+    margin-left: 8px;
+}
+
+.search {
+    margin-bottom: 20px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #00473c;
+    color: white;
+}
+
+tr:hover {
+    background: #f5f9fb;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.empty {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+@media(max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 12px;
+    }
+}
