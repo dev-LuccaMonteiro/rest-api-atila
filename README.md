@@ -353,6 +353,125 @@ You can also use Postman to manually send HTTP requests.
 6. Add a JSON body if required.
 7. Click Send.
 
+
+## 🎯 Demonstração da Solução
+
+### 1. Problema Identificado
+
+O gerenciamento de informações relacionadas a animais de estimação exige uma estrutura organizada para armazenar, consultar e atualizar dados de maneira eficiente.
+
+Sem uma solução centralizada, o acesso às informações pode se tornar desorganizado, dificultando a integração entre diferentes aplicações e o gerenciamento dos dados.
+
+Diante desse cenário, o projeto **Rest API Atila** foi desenvolvido com o objetivo de disponibilizar uma API REST que permita a comunicação padronizada entre aplicações e o backend, facilitando o acesso e o gerenciamento das informações.
+
+### 2. Solução Desenvolvida
+
+A solução consiste em uma API REST responsável por receber requisições HTTP, processar as informações, executar as operações necessárias e retornar respostas estruturadas em JSON.
+
+A API funciona como uma camada intermediária entre a interface consumidora e o banco de dados, centralizando as regras de negócio e o acesso às informações.
+
+Essa arquitetura permite que diferentes interfaces, como aplicações web, sistemas desktop ou aplicativos mobile, utilizem os mesmos serviços disponibilizados pelo backend.
+
+### 3. Decisões Técnicas do Projeto
+
+Durante o desenvolvimento, foram consideradas decisões para garantir organização, manutenção e facilidade de integração.
+
+- **Arquitetura REST:** utilização de padrões HTTP para estruturar a comunicação entre cliente e servidor.
+- **JSON:** formato escolhido para transmitir informações entre as aplicações.
+- **Separação de responsabilidades:** organização da lógica de negócio e do acesso aos dados no backend.
+- **Swagger:** utilização de documentação interativa para facilitar a compreensão e os testes dos endpoints.
+- **Banco de dados:** armazenamento persistente das informações utilizadas pela aplicação.
+- **Padronização das requisições:** utilização dos métodos GET, POST, PUT e DELETE conforme as operações disponibilizadas.
+
+### 4. Fluxo de Comunicação: Interface, API e Banco de Dados
+
+A comunicação acontece em três etapas principais:
+
+**1. Interface (Frontend / Cliente)**
+
+O usuário interage com uma aplicação que disponibiliza funcionalidades para consultar ou manipular informações. A interface envia requisições HTTP para os endpoints da API.
+
+**2. API (Backend)**
+
+A API recebe as requisições, verifica os dados enviados, executa as regras de negócio e realiza a comunicação com o banco de dados quando necessário.
+
+Após o processamento, o backend retorna uma resposta HTTP contendo o resultado da operação.
+
+**3. Banco de Dados**
+
+O banco de dados é responsável por armazenar e disponibilizar as informações solicitadas pela API. As operações de consulta, inserção, atualização e exclusão são realizadas conforme a necessidade da aplicação.
+
+### 5. Arquitetura da Solução
+
+O fluxo geral de comunicação pode ser representado da seguinte maneira:
+
+```text
+       USUÁRIO
+          |
+          v
+   INTERFACE / CLIENTE
+     (Frontend)
+          |
+          | Requisição HTTP
+          v
+      REST API
+      (Backend)
+          |
+          v
+   REGRAS DE NEGÓCIO
+          |
+          v
+    BANCO DE DADOS
+          |
+          | Resultado da operação
+          v
+       REST API
+          |
+          | Resposta HTTP / JSON
+          v
+   INTERFACE / CLIENTE
+          |
+          v
+       USUÁRIO
+```
+
+### 6. Exemplo Prático de Funcionamento
+
+Um exemplo de utilização da solução acontece quando um usuário deseja cadastrar uma nova informação relacionada a um pet.
+
+1. O usuário preenche os dados na interface.
+2. A aplicação envia uma requisição HTTP POST para o endpoint correspondente.
+3. A API recebe os dados no formato JSON.
+4. O backend realiza as validações necessárias.
+5. A API executa a operação de persistência no banco de dados.
+6. O banco de dados confirma a operação.
+7. A API retorna uma resposta HTTP indicando o resultado.
+8. A interface apresenta o resultado ao usuário.
+
+Esse mesmo fluxo pode ser adaptado para consultas, atualizações e exclusões, utilizando os respectivos métodos HTTP.
+
+### 7. Demonstração e Testes
+
+Para demonstrar o funcionamento da solução, foi disponibilizada a documentação interativa através do Swagger UI.
+
+Por meio dela, é possível visualizar os endpoints disponíveis, verificar os parâmetros necessários, enviar requisições e analisar as respostas retornadas pela API.
+
+**Documentação Swagger:**
+
+[http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+
+**Repositório GitHub:**
+
+[https://github.com/dev-LuccaMonteiro/rest-api-atila](https://github.com/dev-LuccaMonteiro/rest-api-atila)
+
+### 8. Resultado Final
+
+O desenvolvimento do Rest API Atila proporciona uma estrutura de backend organizada para disponibilizar informações por meio de serviços REST.
+
+A solução facilita a integração com diferentes aplicações, centraliza o processamento das requisições e estabelece uma comunicação padronizada entre a interface consumidora, o backend e o banco de dados.
+
+Dessa forma, o projeto demonstra a aplicação prática dos conceitos de desenvolvimento backend, arquitetura REST, integração de sistemas e persistência de dados.   
+
 ### cURL
 
 You can also test endpoints directly from your terminal using the examples provided above.
