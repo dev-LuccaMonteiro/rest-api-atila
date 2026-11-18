@@ -353,7 +353,7 @@ You can also use Postman to manually send HTTP requests.
 6. Add a JSON body if required.
 7. Click Send.
 
-
+---
 ## 🎯 Demonstração da Solução
 
 ### 1. Problema Identificado
